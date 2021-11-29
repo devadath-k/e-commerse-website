@@ -151,6 +151,35 @@
         </div>
     </div>
 
+    <hr>
+
+    <div class="team">
+        <h2>OUR TEAM</h2>
+        <div class="team_container">
+            <div class="team_video">
+                <iframe width="560" height="360" src="https://www.youtube.com/embed/wnHW6o8WMas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="team_content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum fringilla nisi, id accumsan massa sagittis non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer porttitor dui in maximus dictum. Mauris at iaculis nunc. Curabitur mattis pulvinar justo eget rhoncus. Quisque at nisi varius, venenatis augue malesuada, dignissim sem.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum fringilla nisi, id accumsan massa sagittis non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer porttitor dui in maximus dictum. Mauris at iaculis nunc. Curabitur mattis pulvinar justo eget rhoncus. Quisque at nisi varius, venenatis augue malesuada, dignissim sem.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum fringilla nisi, id accumsan massa sagittis non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer porttitor dui in maximus dictum. Mauris at iaculis nunc. Curabitur mattis pulvinar justo eget rhoncus. Quisque at nisi varius, venenatis augue malesuada, dignissim sem.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="Feedback_form" method="post">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Contact Number" placeholder="Contact Number"><br>
+                <textarea name="Review" placeholder="Write your review" cols="7" rows="5"></textarea><br>
+                <button type="Submit"> Submit</button>
+            </form>
+        </div>
+    </div>
+
     <footer> 
         <div class="footer_logo">
             <a href="#"><img src="images/logo.jpg" width="110px"></a>
@@ -195,5 +224,17 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <script type="text/JavaScript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoQ2XGLvesGsr0DFFxyJR4E5n0lLRUIK05mED67Q-UdlmqSt0Euk0kb8DoMKUMYmq0fQ/exec'
+            const form = document.forms['Feedback_form']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you for your review, Hope you had great shopping with us"))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
 </body>
 </html>
