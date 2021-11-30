@@ -481,6 +481,7 @@
     border-radius: 5px;
     margin:10px;
     border: none;
+    outline: none;
 }
 .login .login_container form button{
     text-align: center;
