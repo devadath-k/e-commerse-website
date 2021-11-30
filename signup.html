@@ -25,13 +25,19 @@
     <div class="login">
         <div class="login_container">
             <h2>Sign up</h2>
-            <form>
-                <input type="text" name="" placeholder="First Name"><br>
-                <input type="text" name="" placeholder="Last Name"><br>
-                <input type="email" name="" placeholder="Email ID"><br>
-                <input type="number" name="" placeholder="Contact Number"><br>
-                <input type="password" name="" placeholder="Password"><br>
-                <input type="password" name="" placeholder="Re-enter password"><br>
+            <form onsubmit="return validation()" name="Signup-form" method="post">
+                <input type="text" name="First Name" id="First_name" placeholder="First Name"><br>
+                <p id="error_First_name" style="color:red;"></p>
+                <input type="text" name="Last Name" id="Last_name" placeholder="Last Name"><br>
+                <p id="error_Last_name" style="color:red;"></p>
+                <input type="email" name="Email ID" id="email" placeholder="Email ID"><br>
+                <p id="error_email" style="color:red;"></p>
+                <input type="number" name="Contact Number" id="number" placeholder="Contact Number"><br>
+                <p id="error_number" style="color:red;"></p>
+                <input type="password" name="Password" id="password" placeholder="Password"><br>
+                <p id="error_password" style="color:red;"></p>
+                <input type="password" name="Re password" id="Re_password" placeholder="Re-enter password"><br>
+                <p id="error_Re_password" style="color:red;"></p>
                 <button type="submit">Sign Up</button>
             </form>
         </div>
@@ -80,13 +86,72 @@
 
 
     <script type="text/JavaScript">
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoQ2XGLvesGsr0DFFxyJR4E5n0lLRUIK05mED67Q-UdlmqSt0Euk0kb8DoMKUMYmq0fQ/exec'
-            const form = document.forms['Feedback_form']
+        function validation() {
+            var First_name=document.getElementById('First_name').value;
+            var Last_name= document.getElementById('Last_name').value;
+            var email= document.getElementById('email').value;
+            var number=document.getElementById('number').value;
+            var password=document.getElementById('password').value;
+            var Re_password=document.getElementById('Re_password').value;
+
+            var F_namecheck= /^[A-Za-z]{3,30}$/;
+            var L_namecheck= /^[A-Za-z]{0,30}$/;
+            var emailcheck= /^[A-Za-z_0-9.]{3,}@[A-Za-z]{3,8}[.]{1}[A-Za-z.]{2,6}$/;
+            var numbercheck= /^[6789][0-9]{9}$/;
+            var passwordcheck= /^[A-Za-z0-9._!@#$%^&*~]{8,32}$/;
+
+            if(F_namecheck.test(First_name)){
+                document.getElementById('error_First_name').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_First_name').innerHTML="**invalid First name";
+                return false;
+            }
+            if(L_namecheck.test(Last_name)){
+                document.getElementById('error_Last_name').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_Last_name').innerHTML="**invalid Last name";
+                return false;
+            }
+            if(emailcheck.test(email)){
+                document.getElementById('error_email').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_email').innerHTML="**invalid Email ID";
+                return false;
+            }
+            if(numbercheck.test(number)){
+                document.getElementById('error_number').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_number').innerHTML="**invalid Number";
+                return false;
+            }
+            if(passwordcheck.test(password)){
+                document.getElementById('error_password').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_password').innerHTML="**8-32 charectors required";
+                return false;
+            }
+            if(Re_password==password){
+                document.getElementById('error_Re_password').innerHTML=" ";
+            }
+            else{
+                document.getElementById('error_Re_password').innerHTML="**invalid password";
+                return false;
+            }
+        }
+    </script>
+    <script type="text/JavaScript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyGVv1lY53sjsMzr71UlDTvX0HRzyPXqjLiA-EQG9inIWFB9AxiAUssLqsEGZ8dAYqu/exec'
+            const form = document.forms['Signup-form']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thank you for your review, Hope you had great shopping with us"))
+                .then(response => alert("Welcome to 1stop"))
                 .catch(error => console.error('Error!', error.message))
             })
     </script>
