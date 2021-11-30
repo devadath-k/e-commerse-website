@@ -344,6 +344,7 @@
     padding:5px;
     outline: none;
     border: none;
+    font-family: sans-serif;
 }
 .feed .feed_form form button{
     width:30%;
@@ -355,7 +356,51 @@
     color:white;
     border-radius: 5px;
 }
-
+.about_us{
+    padding:100px;
+    padding-top: 120px;
+}
+.about_us h2{
+    color:orange;
+    font-size: 40px;
+    font-family: cosmic, sans-serif;
+    text-align:center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.about_us p{
+    padding:5px;
+    font-size:14px;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+.contact_container{
+    padding:100px;
+}
+.contact_container h2{
+    color:orange;
+    font-size: 40px;
+    font-family: cosmic, sans-serif;
+    text-align:center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.contact_container .g_map{
+    border: 10px solid orange;
+}
+.contact_container .contact_content{
+    padding:20px;
+}
+.contact_container .contact_content p{
+    padding:10px;
+    font-size: 13px;
+    font-family: cosmic, sans-serif;
+    line-height: 25px;
+    text-align:center;
+}
 footer{
     background-color: rgb(5, 81, 104);
     padding: 10px;
@@ -368,11 +413,12 @@ footer .pages h3{
     font-family: sans-serif;
     padding:5px;
     font-size: 20px;
+    margin:10px 0;
 }
 footer .pages a{
     text-decoration: none;
     color:white;
-    margin:10px;
+    margin:15px;
     font-size: 15px;
     font-family: sans-serif;
 
@@ -388,11 +434,12 @@ footer .doc h3{
     font-family: sans-serif;
     padding:5px;
     font-size: 20px;
+    margin:10px 0;
 }
 footer .doc a{
     text-decoration: none;
     color:white;
-    margin:10px;
+    margin:15px;
     font-size: 15px;
     font-family: sans-serif;
 
@@ -408,6 +455,7 @@ footer .social h3{
     font-family: sans-serif;
     padding:5px;
     font-size: 20px;
+    margin:10px 0;
 }
 footer .social a{
     text-decoration: none;
@@ -428,6 +476,7 @@ footer .contact h3{
     font-family: sans-serif;
     padding:5px;
     font-size: 20px;
+    margin:10px 0;
 }
 footer .contact a{
     text-decoration: none;
@@ -435,7 +484,6 @@ footer .contact a{
     margin:15px;
     font-size: 25px;
     font-family: sans-serif;
-
 }
 footer .contact a:hover{
     color:orange;
