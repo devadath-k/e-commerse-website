@@ -395,7 +395,9 @@
     line-height: 25px;
 }
 .contact_container{
-    padding:100px;
+    padding:120px 10px 10px 10px;
+    max-width:1400px;
+    margin:auto;
 }
 .contact_container h2{
     color:orange;
