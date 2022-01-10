@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>E-commerce | Services</title>
 </head>
 <body>
-    <nav class="nav nav_top">
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.jpg" width="110px"></a>
-        </div>
-        <div class="nav_side">
-            <a href="about.html">About us</a>
-            <a href="service.html" class="active">Services</a>
-            <a href="blog.html">Blogs</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login/Register</a>
-        </div>
+    <nav class="navbar navi nav_top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" width="100px"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="Navbar">
+                <div class="nav_side">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="about.html"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About Us</a></li>
+                        <li><a href="#" class="active"><i class="fa fa-handshake-o fa-lg" aria-hidden="true"></i> Services</a></li>
+                        <li><a href="blog.html"><i class="fa fa-book fa-lg" aria-hidden="true"></i> Blogs</a></li>
+                        <li><a href="contact.html"><i class="fa fa-address-card fa-lg" aria-hidden="true"></i> Contact</a></li>
+                        <li><a href="login.html"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login/Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
     </nav>
 
     <div class="product" style="padding-top:120px">
@@ -143,7 +158,10 @@
         <p>Copyright &copy; 2021 1stop. All rights reserved</p>
     </footer>
 
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <script type="text/JavaScript">
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzoQ2XGLvesGsr0DFFxyJR4E5n0lLRUIK05mED67Q-UdlmqSt0Euk0kb8DoMKUMYmq0fQ/exec'
             const form = document.forms['Feedback_form']

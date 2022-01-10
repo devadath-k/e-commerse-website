@@ -14,17 +14,30 @@
     <title>E-commerce</title>
 </head>
 <body>
-    <nav class="nav nav_top">
-        <div class="logo">
-            <a href="#"><img src="images/logo.jpg" width="110px"></a>
-        </div>
-        <div class="nav_side">
-            <a href="about.html">About us</a>
-            <a href="service.html">Services</a>
-            <a href="blog.html">Blogs</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login/Register</a>
-        </div>
+    <nav class="navbar navi nav_top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.jpg" width="100px"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="Navbar">
+                <div class="nav_side">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="about.html"><i class="fa fa-info fa-lg" aria-hidden="true"></i> About Us</a></li>
+                        <li><a href="service.html"><i class="fa fa-handshake-o fa-lg" aria-hidden="true"></i> Services</a></li>
+                        <li><a href="blog.html"><i class="fa fa-book fa-lg" aria-hidden="true"></i> Blogs</a></li>
+                        <li><a href="contact.html"><i class="fa fa-address-card fa-lg" aria-hidden="true"></i> Contact</a></li>
+                        <li><a href="login.html"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Login/Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
     </nav>
 
     <div class="main">
@@ -157,7 +170,7 @@
         <h2>OUR TEAM</h2>
         <div class="team_container">
             <div class="team_video">
-                <iframe width="560" height="360" src="https://www.youtube.com/embed/wnHW6o8WMas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wnHW6o8WMas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="team_content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum fringilla nisi, id accumsan massa sagittis non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer porttitor dui in maximus dictum. Mauris at iaculis nunc. Curabitur mattis pulvinar justo eget rhoncus. Quisque at nisi varius, venenatis augue malesuada, dignissim sem.</p>
